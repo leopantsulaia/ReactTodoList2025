@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function NewTask({ onAdd }) { // Fix destructuring
+export default function NewTask({ onAdd }) { 
     const [enteredTask, setEnteredTask] = useState("");
 
     function handleChange(event) {
@@ -8,9 +8,9 @@ export default function NewTask({ onAdd }) { // Fix destructuring
     }
 
     function handleClick() {
-        if (enteredTask.trim().length === 0) return; // Prevent empty tasks
+        if (enteredTask.trim().length === 0) return; 
         onAdd(enteredTask);
-        setEnteredTask(""); // Clear input after adding
+        setEnteredTask("");
     }
 
     return (
